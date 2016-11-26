@@ -39,10 +39,6 @@ namespace CleaningAppCSharp
             {
                 MessageBox.Show("Documents older than 90 days are not allowed.");
             }
-            catch (IOException)
-            {
-                MessageBox.Show("Another user is already using this file.");
-            }
 
         }
 
@@ -80,21 +76,60 @@ namespace CleaningAppCSharp
 
         private void button3_Click(object sender, RoutedEventArgs e)
         {
-
+            try
+            {
+                string command = "/C Cleanmgr /sagerun:1";
+                Process.Start("CMD.exe", command);
+            }
+            catch (IOException)
+            {
+                MessageBox.Show("CCleaner does not exist");
+            }
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-
+            try
+            {
+                string fileName = "ccleaner /auto";
+                string path = System.IO.Path.Combine(Environment.CurrentDirectory, @"Dependencies\", fileName);
+                string command = "/C " + path;
+                Process.Start("CMD.exe", command);
+                MessageBox.Show("CCleaner has started cleaning\nIt will take a few minutes depending on the ammount of junk files on the computer");
+            }
+            catch (IOException)
+            {
+                MessageBox.Show("CCleaner does not exist");
+            }
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
+            try
+            {
+                string fileName = "defrag.bat";
+                string path = System.IO.Path.Combine(Environment.CurrentDirectory, @"Webcontent\", fileName);
+                Process.Start(path);
+            }
+            catch (IOException)
+            {
 
+            }
         }
 
         private void button2_Click(object sender, RoutedEventArgs e)
         {
+            
+                 try
+            {
+                string fileName = "Deleteoldfiles.bat";
+                string path = System.IO.Path.Combine(Environment.CurrentDirectory, @"Webcontent\", fileName);
+                Process.Start(path);
+            }
+            catch (IOException)
+            {
+
+            }
 
         }
     }
