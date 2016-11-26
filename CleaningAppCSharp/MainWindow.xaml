@@ -1,0 +1,27 @@
+﻿<Window x:Class="CleaningAppCSharp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CleaningAppCSharp"
+        mc:Ignorable="d"
+        ResizeMode="CanMinimize"
+        Title="UTRGV Cleaning Tool" Height="300" Width="500">
+    <Grid Background="#FFE5E3DF">
+        <Menu x:Name="menu" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="500" Background="#FFE14A18" Foreground="White">
+            <MenuItem x:Name="MenuProfile" Header="Menu"  FontFamily="Arial">
+                <MenuItem Header="Help" HorizontalAlignment="Left" Width="139.5" Click="MenuItem_Click_3"/>
+                <MenuItem Header="Feedback" HorizontalAlignment="Left" Width="139.5" Click="MenuItem_Click_1"/>
+                <MenuItem Header="About" HorizontalAlignment="Left" Width="139.5" Click="MenuItem_Click_2"/>
+            </MenuItem>
+        </Menu>
+        <Button x:Name="LogInButton" Content="Log in" HorizontalAlignment="Center" VerticalAlignment="Top" Width="50" Margin="0,200,0,0" Click="LogInButton_Click" Background="#FFE14A18" Foreground="White" FontFamily="Arial"/>
+        <ComboBox x:Name="profiles" HorizontalAlignment="Center" VerticalAlignment="Top" Width="100" Margin="0,150,0,0">
+            <ComboBoxItem Content="Staff" HorizontalAlignment="Left" Width="94"/>
+            <ComboBoxItem Content="Circulation" HorizontalAlignment="Left" Width="94" />
+        </ComboBox>
+        <Label x:Name="profilelable" Content="Please choose a profile:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60,150,0,0" FontFamily="Arial"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Center" TextWrapping="Wrap" Text="UTRGV Cleaning Tool" VerticalAlignment="Top" Margin="0,50,0,0" Height="38" Width="380" TextAlignment="Center" FontSize="30" FontFamily="Arial"/>
+
+    </Grid>
+</Window>
