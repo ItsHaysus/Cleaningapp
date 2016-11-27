@@ -6,22 +6,22 @@
         xmlns:local="clr-namespace:CleaningAppCSharp"
         mc:Ignorable="d"
         ResizeMode="CanMinimize"
-        Title="UTRGV Cleaning Tool" Height="300" Width="500">
+        Title="UTRGV Cleaning Tool" Height="250" Width="550">
     <Grid Background="#FFE5E3DF">
-        <Menu x:Name="menu" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="500" Background="#FFE14A18" Foreground="White">
+        <Menu x:Name="menu" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="550" Background="#FFE14A18" Foreground="White">
             <MenuItem x:Name="MenuProfile" Header="Menu"  FontFamily="Arial">
-                <MenuItem Header="Help" HorizontalAlignment="Left" Width="139.5" Click="MenuItem_Click_3"/>
-                <MenuItem Header="Feedback" HorizontalAlignment="Left" Width="139.5" Click="MenuItem_Click_1"/>
-                <MenuItem Header="About" HorizontalAlignment="Left" Width="139.5" Click="MenuItem_Click_2"/>
+                <MenuItem Header="Help" HorizontalAlignment="Left" Width="139.5" Click="HelpMenu" Foreground="Black"/>
+                <MenuItem Header="Feedback" HorizontalAlignment="Left" Width="139.5" Click="FeedbackMenu" Foreground="Black"/>
+                <MenuItem Header="About" HorizontalAlignment="Left" Width="139.5" Click="AboutMenu" Foreground="Black"/>
             </MenuItem>
         </Menu>
-        <Button x:Name="LogInButton" Content="Log in" HorizontalAlignment="Center" VerticalAlignment="Top" Width="50" Margin="0,200,0,0" Click="LogInButton_Click" Background="#FFE14A18" Foreground="White" FontFamily="Arial"/>
+        <Button x:Name="LogInButton" Content="Log in" HorizontalAlignment="Center" VerticalAlignment="Top" Width="50" Margin="0,180,0,0" Click="LoginButton" Background="#FFE14A18" Foreground="White" FontFamily="Arial"/>
         <ComboBox x:Name="profiles" HorizontalAlignment="Center" VerticalAlignment="Top" Width="100" Margin="0,150,0,0">
             <ComboBoxItem Content="Staff" HorizontalAlignment="Left" Width="94"/>
             <ComboBoxItem Content="Circulation" HorizontalAlignment="Left" Width="94" />
         </ComboBox>
-        <Label x:Name="profilelable" Content="Please choose a profile:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60,150,0,0" FontFamily="Arial"/>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Center" TextWrapping="Wrap" Text="UTRGV Cleaning Tool" VerticalAlignment="Top" Margin="0,50,0,0" Height="38" Width="380" TextAlignment="Center" FontSize="30" FontFamily="Arial"/>
+        <Label x:Name="profilelable" Content="Please choose a profile:" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,150,250,0" FontFamily="Arial"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Center" TextWrapping="Wrap" Text="UTRGV Cleaning Tool" VerticalAlignment="Top" Margin="0,50,0,0" Height="59" Width="416" TextAlignment="Center" FontSize="50" FontFamily="Arial" FontWeight="Bold"/>
 
     </Grid>
 </Window>
