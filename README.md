@@ -5,6 +5,12 @@
 	
 <dl>
   <H3>Changelog</H3>
+  <dt>Verion 2.0.0.16332</dt>
+  <ul>
+  <li>Added class method where i store all methods</li>
+  <li>Fixed uneccessary importing files</li>
+  <li>Code will break when attempting to log in</li>
+  </ul>
       <dt>Version 1.0.0.0</dt>
   <ul>
   <li>Initial release: Same functions as the Java version, but with some bugs (IO exemptions)</li>
