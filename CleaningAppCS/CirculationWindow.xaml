@@ -1,0 +1,28 @@
+﻿<Window x:Class="CleaningAppCS.CirculationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CleaningAppCS"
+        mc:Ignorable="d"
+        ResizeMode="CanMinimize"
+        Title="CirculationWindow" Height="400" Width="700">
+    <Grid Background="#FFE5E3DF">
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Center" TextWrapping="Wrap" Text="UTRGV Cleaning Tool" VerticalAlignment="Top" Margin="0,25,0,0" Height="73" Width="624" TextAlignment="Center" FontSize="50" FontFamily="Arial" FontWeight="Bold"/>
+        <Menu x:Name="menu" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="700" Foreground="White" Background="#FFE14A18">
+            <MenuItem x:Name="MenuProfile" Header="Menu" FontFamily="Arial">
+                <MenuItem Header="Help" HorizontalAlignment="Left" Width="139.5" Click="HelpMenu" Foreground="Black" />
+                <MenuItem Header="Feedback" HorizontalAlignment="Left" Width="139.5" Click="FeedbackMenu" Foreground="Black" />
+                <MenuItem Header="About" HorizontalAlignment="Left" Width="139.5" Click="AboutMenu" Foreground="Black" />
+            </MenuItem>
+            <MenuItem Header="Log out" Click="LogOutMenu" Foreground="White"/>
+        </Menu>
+        <Button x:Name="defragbtn" Content="Defrag Disk" HorizontalAlignment="Center" VerticalAlignment="Top" Width="75" Margin="0,314,60,0" Background="#FFE14A18" Click="DefragButton" FontFamily="Arial" Foreground="White"/>
+        <Button x:Name="ccleanerbtn" Content="Clean with CCleaner" HorizontalAlignment="Center" VerticalAlignment="Top" Width="120" Margin="0,314,-160,0" Background="#FFE14A18" Click="CCleanerMethod" FontFamily="Arial" Foreground="White"/>
+        <Button x:Name="deletefilesbtn" Content="Delete old files" HorizontalAlignment="Center" VerticalAlignment="Top" Width="85" Margin="0,314,450,0" Background="#FFE14A18" Click="DeleteOldFilesButton" FontFamily="Arial" Foreground="White"/>
+        <Button x:Name="diskcleanerbtn" Content="Clean with Disk Cleaner" HorizontalAlignment="Center" VerticalAlignment="Top" Width="135" Margin="0,314,-450,0" Background="#FFE14A18" Click="DiskCleanerButton" FontFamily="Arial" Foreground="White"/>
+        <Button x:Name="backupbtn" Content="Back up files" HorizontalAlignment="Center" VerticalAlignment="Top" Width="80" Margin="0,314,250,0" Click="Backkupbtn" Background="#FFE14A18" FontFamily="Arial" Foreground="White"/>
+        <TextBlock x:Name="readmeTXT" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Top" Margin="0,130,0,0" FontFamily="Arial" FontSize="16" Height="172" Width="624"><Run Text="Please select an option:"/><LineBreak/><Run Text="Backup files: backs up files with the supported extensions."/><LineBreak/><Run Text="Clean using CCleaner: Runs CCleaner in auto mode."/><LineBreak/><Run Text="Delete old files: Deletes files with the supported extensions and older than 730 days."/><LineBreak/><Run Text="Clean using Disk Cleanup: Uses Disk Cleanup to run the default Window's clean utility."/><LineBreak/><Run Text="Defragment disk: Defragments C: drive. Requires administrator rights and takes hours."/></TextBlock>
+
+    </Grid>
+</Window>
