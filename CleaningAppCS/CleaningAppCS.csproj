@@ -20,7 +20,7 @@
     <AssemblyVersionSettings>None.IncrementOnDemandWithReset.Increment.DateStamp</AssemblyVersionSettings>
     <AssemblyFileVersionSettings>None.IncrementOnDemandWithReset.Increment.DateStamp</AssemblyFileVersionSettings>
     <AssemblyInfoVersionSettings>None.IncrementOnDemandWithReset.Increment.DateStamp</AssemblyInfoVersionSettings>
-    <AssemblyVersion>1.0.10.16333</AssemblyVersion>
+    <AssemblyVersion>1.0.17.16333</AssemblyVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>

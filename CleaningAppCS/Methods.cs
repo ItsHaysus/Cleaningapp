@@ -21,7 +21,7 @@ namespace CleaningAppCSharp
             }
             catch (FileNotFoundException)
             {
-                MessageBox.Show("Documents older than 90 days are not allowed.");
+                MessageBox.Show("File not found");
             }
 
         }
@@ -44,18 +44,22 @@ namespace CleaningAppCSharp
               try
             {
                 string fileName = "read.pdf";
-                string path = System.IO.Path.Combine(Environment.CurrentDirectory, @"Webcontent\", fileName);
+                string path = Path.Combine(Environment.CurrentDirectory, @"Webcontent\", fileName);
                 Process.Start(path);
             }
             catch (FileNotFoundException)
             {
-                MessageBox.Show("Documents older than 90 days are not allowed.");
+                Console.WriteLine("Not found");
             }
             catch (IOException)
             {
-                MessageBox.Show("Another user is already using this file.");
+                Console.WriteLine("IO");
             }
-        }
+    catch (System.ComponentModel.Win32Exception)
+    {
+        MessageBox.Show("File not found");
+    }
+}
 
         public void AboutMethod()
         {
@@ -68,7 +72,7 @@ namespace CleaningAppCSharp
                 MessageBoxImage.Asterisk);
             if (messageBoxResult.ToString() == "Yes")
             {
-                Process.Start("https://itshaysus.github.io/Cleaningapp/");
+                Process.Start("https://itshaysus.github.io/CleaningappinCSharp/");
             }
         }
 
@@ -79,9 +83,9 @@ namespace CleaningAppCSharp
                 string command = "/C Cleanmgr /sagerun:1";
                 Process.Start("CMD.exe", command);
             }
-            catch (IOException)
+            catch (System.ComponentModel.Win32Exception)
             {
-                MessageBox.Show("CCleaner does not exist");
+                MessageBox.Show("File not found");
             }
         }
 
@@ -90,7 +94,7 @@ namespace CleaningAppCSharp
             try
             {
                 string fileName = "ccleaner /auto";
-                string path = System.IO.Path.Combine(Environment.CurrentDirectory, @"Dependencies\", fileName);
+                string path = Path.Combine(Environment.CurrentDirectory, @"Dependencies\", fileName);
                 string command = "/C " + path;
                 Process.Start("CMD.exe", command);
                 MessageBox.Show("CCleaner has started cleaning\nIt will take a few minutes depending on the ammount of junk files on the computer");
@@ -98,6 +102,10 @@ namespace CleaningAppCSharp
             catch (IOException)
             {
                 MessageBox.Show("CCleaner does not exist");
+            }
+            catch (System.ComponentModel.Win32Exception)
+            {
+                MessageBox.Show("File not found");
             }
         }
 
@@ -120,12 +128,16 @@ namespace CleaningAppCSharp
             try
             {
                 string fileName = "Deleteoldfiles.bat";
-                string path = System.IO.Path.Combine(Environment.CurrentDirectory, @"Webcontent\", fileName);
+                string path = Path.Combine(Environment.CurrentDirectory, @"Webcontent\", fileName);
                 Process.Start(path);
             }
             catch (IOException)
             {
-
+                Console.WriteLine("IO");
+            }
+            catch (System.ComponentModel.Win32Exception)
+            {
+                MessageBox.Show("File not found");
             }
         }
 
