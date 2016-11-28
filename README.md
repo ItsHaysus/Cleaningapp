@@ -6,7 +6,7 @@
 <dl>
   <H3>Changelog</H3>
 	<dt>Version 1.0.10.16333</dt>
-	<li>Started a new due to some erros<li>
+	<li>Started a new due to some erros</li>
       <dt>Version 1.0.0.0</dt>
   <ul>
   <li>Initial release: Same functions as the Java version, but with some bugs (IO exemptions)</li>
