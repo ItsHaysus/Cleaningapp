@@ -6,7 +6,7 @@
 <dl>
   <H3>Changelog</H3>
 	<dt>Version 1.0.10.16333</dt>
-	<li>Started a new due to some erros<li>
+	<li>Started a new due to some erros</li>
   <dt>Verion 2.0.0.16332</dt>
   <ul>
   <li>Added class method where i store all methods</li>
