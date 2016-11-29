@@ -2,4 +2,3 @@
 
 <p> This app was made using Visual C# and it was done during my first two weeks working at the University of Texas Rio Grande Valley.
 	It consists of using third party applications to give a reliable and simple computer cleaning method</p>
-	
