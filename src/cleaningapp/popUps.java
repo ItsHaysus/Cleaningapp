@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Hyperlink;
@@ -75,13 +76,9 @@ public class popUps {
         link.setOnAction((ActionEvent e) -> {
             try {
                 Desktop.getDesktop().browse(new URI("https://itshaysus.github.io/Cleaningapp/"));
-            } catch (IOException e1) {
-                e1.printStackTrace();
-            } catch (URISyntaxException e1) {
-                e1.printStackTrace();
+            } catch (IOException | URISyntaxException e1) {
             }
-        }
-        );
+        });
         about.setAlignment(Pos.CENTER);
 
         about.add(popupText,

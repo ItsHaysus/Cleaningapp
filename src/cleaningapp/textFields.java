@@ -4,7 +4,6 @@ import javafx.geometry.Pos;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
-import javafx.scene.text.TextAlignment;
 
 /**
  *
@@ -42,7 +41,7 @@ public class textFields {
 
     BorderPane ui() {
         BorderPane UI = new BorderPane();
-        UI.setAlignment(UI,Pos.CENTER);
+        BorderPane.setAlignment(UI,Pos.CENTER);
         UI.setTop(bannerPane());
         UI.setCenter(README());
         

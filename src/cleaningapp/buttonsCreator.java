@@ -1,10 +1,10 @@
 package cleaningapp;
 
-import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
@@ -65,6 +65,7 @@ public class buttonsCreator {
 
     GridPane buttonPane() {
         GridPane ButtonPane = new GridPane();
+        ButtonPane.setPadding(new Insets(25,25,25,25));
         ButtonPane.setHgap(10);
         ButtonPane.setVgap(10);
         ButtonPane.setAlignment(Pos.CENTER);
@@ -92,18 +93,14 @@ public class buttonsCreator {
         loginbuttonpane.add(logInOptions, 0, 1);
         final Label notification = new Label("Choose a profile: ");
         loginbuttonpane.add(notification, 0, 0);
-        logInOptions.getSelectionModel().selectedItemProperty().addListener(new ChangeListener() {
-            @Override
-            public void changed(ObservableValue ov, Object t, Object t1) {
-
-                switch (t1.toString()) {
-                    case "Circulation":
-                        btnMeth.changeToCirculation();
-                        break;
-                    case "Staff":
-                        btnMeth.changeToStaff();
-                        break;
-                }
+        logInOptions.getSelectionModel().selectedItemProperty().addListener((ObservableValue ov, Object t, Object t1) -> {
+            switch (t1.toString()) {
+                case "Circulation":
+                    btnMeth.changeToCirculation();
+                    break;
+                case "Staff":
+                    btnMeth.changeToStaff();
+                    break;
             }
         });
 

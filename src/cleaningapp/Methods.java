@@ -18,7 +18,10 @@ public class Methods {
 
     String filePath = new File("").getAbsolutePath();
     CirculationScene circulation = new CirculationScene();
+    LogInScene login = new LogInScene();
     popUps pops = new popUps();
+    Stage logInStage = new Stage();
+    Stage CirculationStage = new Stage();
 
     void backupFiles() {
         String Backupcommand = "cmd /c start " + filePath.concat("\\Batchfiles\\backup.bat");
@@ -95,19 +98,28 @@ public class Methods {
     }
 
     void changeToCirculation() {
-        Stage CirculationStage = new Stage();
         CirculationStage.setScene(circulation.circulationScene());
         CirculationStage.getIcons().add(new Image("file:icon.png"));
         CirculationStage.setTitle("Computer Maintenance");
         CirculationStage.show();
         CirculationStage.sizeToScene();
+        logInStage.close();
     }
 
     void changeToStaff() {
         pops.notSupported();
     }
-    
-    void about(){
+
+    void about() {
         pops.About();
+    }
+
+    void switchToLogin() {
+        logInStage.setScene(login.LoginScene());
+        logInStage.getIcons().add(new Image("file:icon.png"));
+        logInStage.setTitle("Computer Maintenance");
+        logInStage.show();
+        logInStage.sizeToScene();
+        CirculationStage.close();
     }
 }
