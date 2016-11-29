@@ -1,4 +1,4 @@
-﻿using CleaningAppCSharp;
+using CleaningAppCSharp;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -68,7 +68,23 @@ namespace CleaningAppCS
 
         private void LogOutMenu(object sender, RoutedEventArgs e)
         {
-            method.LogoutMethod();
+              LogInWindow main = new LogInWindow();
+            try
+            {
+                MessageBoxResult messageBoxResult = MessageBox.Show("Would you like to change profiles?",
+                    "Log out",
+                    MessageBoxButton.YesNo,
+                    MessageBoxImage.Asterisk);
+                if (messageBoxResult.ToString() == "Yes")
+                {
+                    main.Show();
+                    this.Close();
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Problem Sigining out");
+            }
         }
     }
 }
