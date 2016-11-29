@@ -72,7 +72,8 @@ namespace CleaningAppCSharp
                 MessageBoxImage.Asterisk);
             if (messageBoxResult.ToString() == "Yes")
             {
-                Process.Start("https://itshaysus.github.io/CleaningappinCSharp/");
+                Process.Start("https://github.com/ItsHaysus/CleaningappinCSharp/releases");
+
             }
         }
 
