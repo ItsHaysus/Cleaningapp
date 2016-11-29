@@ -47,7 +47,7 @@ public class popUps {
         dialog.initModality(Modality.APPLICATION_MODAL);
         dialog.initOwner(primaryStage);
         BorderPane dialogVbox = new BorderPane();
-        Text popupText = new Text("Feature coming soon!");
+        Text popupText = new Text("Feature not yet supported");
         popupText.setId("popuptext");
         dialogVbox.setCenter(popupText);
         dialogVbox.setId("popupbox");
@@ -67,7 +67,7 @@ public class popUps {
         BorderPane dialogVbox = new BorderPane();
         GridPane about = new GridPane();
 
-        Text popupText = new Text("Current version is 2.4.6");
+        Text popupText = new Text("Current version is 2.4.1");
         popupText.setId("popuptext");
 
         Hyperlink link = new Hyperlink();

@@ -4,6 +4,7 @@ import javafx.geometry.Pos;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
+import javafx.scene.text.TextAlignment;
 
 /**
  *
@@ -46,5 +47,11 @@ public class textFields {
         UI.setCenter(README());
         
         return UI;
+    }
+    BorderPane Loginui() {
+        BorderPane loginUI = new BorderPane();
+        loginUI.setTop(bannerPane());
+        loginUI.setCenter(buttons.logInButtonPane());
+        return loginUI;
     }
 }

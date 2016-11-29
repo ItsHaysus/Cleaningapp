@@ -7,6 +7,8 @@ import java.io.IOException;
 import java.net.URI;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.scene.image.Image;
+import javafx.stage.Stage;
 
 /**
  *
@@ -66,7 +68,8 @@ public class Methods {
 
     void Help() {
         try {
-            File file = new File(filePath.concat("\\Webcontent\\read.pdf"));
+            String findHelp = filePath.concat("\\Webcontent\\read.pdf");
+            File file = new File(findHelp);
             if (file.exists()) {
                 if (Desktop.isDesktopSupported()) {
                     Desktop.getDesktop().open(file);
@@ -89,6 +92,19 @@ public class Methods {
             Logger.getLogger(Methods.class.getName()).log(Level.SEVERE, null, ex);
         }
 
+    }
+
+    void changeToCirculation() {
+        Stage CirculationStage = new Stage();
+        CirculationStage.setScene(circulation.circulationScene());
+        CirculationStage.getIcons().add(new Image("file:icon.png"));
+        CirculationStage.setTitle("Computer Maintenance");
+        CirculationStage.show();
+        CirculationStage.sizeToScene();
+    }
+
+    void changeToStaff() {
+        pops.notSupported();
     }
     
     void about(){

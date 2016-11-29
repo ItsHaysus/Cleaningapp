@@ -7,6 +7,8 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 
 /**
@@ -73,5 +75,38 @@ public class buttonsCreator {
         ButtonPane.add(defragdisk(), 4, 0);
         return ButtonPane;
 
+    }
+
+    GridPane logInButtonPane() {
+        GridPane loginbuttonpane = new GridPane();
+        loginbuttonpane.setAlignment(Pos.CENTER);
+        loginbuttonpane.setVgap(10);
+        loginbuttonpane.setHgap(10);
+
+        ObservableList<String> profiles
+                = FXCollections.observableArrayList(
+                        "Circulation",
+                        "Staff"
+                );
+        final ComboBox logInOptions = new ComboBox(profiles);
+        loginbuttonpane.add(logInOptions, 0, 1);
+        final Label notification = new Label("Choose a profile: ");
+        loginbuttonpane.add(notification, 0, 0);
+        logInOptions.getSelectionModel().selectedItemProperty().addListener(new ChangeListener() {
+            @Override
+            public void changed(ObservableValue ov, Object t, Object t1) {
+
+                switch (t1.toString()) {
+                    case "Circulation":
+                        btnMeth.changeToCirculation();
+                        break;
+                    case "Staff":
+                        btnMeth.changeToStaff();
+                        break;
+                }
+            }
+        });
+
+        return loginbuttonpane;
     }
 }
