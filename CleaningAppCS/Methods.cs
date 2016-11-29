@@ -73,6 +73,7 @@ namespace CleaningAppCSharp
             if (messageBoxResult.ToString() == "Yes")
             {
                 Process.Start("https://github.com/ItsHaysus/CleaningappinCSharp/releases");
+
             }
         }
 
