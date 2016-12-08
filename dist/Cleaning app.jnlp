@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Cleaning app.jnlp">
+  <information>
+    <title>Cleaning app</title>
+    <vendor>UTRGV</vendor>
+    <description>Cleaning app</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="CleaningApp2.0.jar" size="240452" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="Cleaning app" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="cleaningapp2.pkg0.CleaningApp20"  name="Cleaning app" />
+  <update check="always"/>
+</jnlp>
