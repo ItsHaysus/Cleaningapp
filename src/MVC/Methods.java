@@ -107,4 +107,16 @@ public class Methods {
         pops.About();
     }
 
+    void ScheduleTask() {
+        String file = filePath.concat("\\Batchfiles\\backup.bat") ;
+        String ScheduleTask = "SchTasks /Create /SC MONTHLY /D 1 /TN “Backup” /TR “"+file+"” /ST 16:30";
+        Process child;
+        try {
+            child = Runtime.getRuntime().exec(ScheduleTask);
+                pops.Success();
+        } catch (IOException ex) {
+            Logger.getLogger(Methods.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
 }

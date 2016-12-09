@@ -1,0 +1,24 @@
+#titleBanner {
+    -fx-font: 50px Arial;
+    -fx-stroke: black;
+    -fx-stroke-width: 2;
+    -fx-font-smoothing-type: lcd;
+}
+.button{
+    -fx-text-fill: whitesmoke;
+    -fx-border-color: #E14A18;
+    -fx-border-radius: 5;
+    -fx-padding: 5 5 5 5;
+    -fx-font: 12px Arial;
+}
+.root{
+    -fx-font: 16px Arial;
+    -fx-font-smoothing-type: lcd;
+    -fx-base:#E14A18;
+    -fx-background: rgb(229, 227, 223); 
+}
+.menu{
+    -fx-font: 12px Arial;
+    -fx-font-smoothing-type: lcd; 
+    background: #E14A18
+}

@@ -58,6 +58,23 @@ public class popUps {
         dialog.centerOnScreen();
         dialog.show();
     }
+    void Success() {
+
+        final Stage dialog = new Stage();
+        dialog.initModality(Modality.APPLICATION_MODAL);
+        dialog.initOwner(primaryStage);
+        BorderPane dialogVbox = new BorderPane();
+        Text popupText = new Text("Task was created!");
+        popupText.setId("popuptext");
+        dialogVbox.setCenter(popupText);
+        dialogVbox.setId("popupbox");
+        Scene dialogScene = new Scene(dialogVbox, 200, 100);
+        dialog.setScene(dialogScene);
+        dialog.setTitle("Success");
+        dialog.getIcons().add(new Image("file:icon.png"));
+        dialog.centerOnScreen();
+        dialog.show();
+    }
 
     void About() {
 
@@ -67,7 +84,7 @@ public class popUps {
         BorderPane dialogVbox = new BorderPane();
         GridPane about = new GridPane();
 
-        Text popupText = new Text("Current version is 2.0.0");
+        Text popupText = new Text("Current version is 2.1.0");
         popupText.setId("popuptext");
 
         Hyperlink link = new Hyperlink();
