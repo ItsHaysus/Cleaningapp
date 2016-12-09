@@ -1,0 +1,12 @@
+body{
+    font-size: 16px;
+    text-align: center;
+}
+#updates{
+    height: available;
+    width: 50%;
+}
+#changelogs{
+     height: available;
+    width: 50%;
+}
