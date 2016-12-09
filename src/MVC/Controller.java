@@ -10,7 +10,7 @@ import javafx.beans.value.ObservableValue;
 /**
  *
  * @author Jesus
- * @version 2.0.0
+ * @version 2.1.0
  */
 public class Controller {
 
@@ -36,38 +36,43 @@ public class Controller {
                 }
             });
         });
-        view.BakcupFiles.setOnAction((event)->
-        {
+        view.BakcupFiles.setOnAction((event)
+                -> {
             methods.backupFiles();
         });
-        view.CleanOldFiles.setOnAction((event)->
-        {
+        view.CleanOldFiles.setOnAction((event)
+                -> {
             methods.cleanOldFiles();
         });
-        view.CleanOldfilesWithCCleaner.setOnAction((event)->
-        {
+        view.CleanOldfilesWithCCleaner.setOnAction((event)
+                -> {
             methods.cleanWithCCleaner();
         });
-        view.CleanTempfiles.setOnAction((event)->
-        {
+        view.CleanTempfiles.setOnAction((event)
+                -> {
             methods.cleanTempFiles();
         });
-        view.DefragDisk.setOnAction((event)->
-        {
+        view.DefragDisk.setOnAction((event)
+                -> {
             methods.defragDisk();
         });
-        view.about.setOnAction((event)->
-        {
+        view.about.setOnAction((event)
+                -> {
             methods.about();
         });
-        view.feedback.setOnAction((event)->
-        {
+        view.feedback.setOnAction((event)
+                -> {
             methods.Feedback();
         });
-        view.help.setOnAction((event)->
-        {
+        view.help.setOnAction((event)
+                -> {
             methods.Help();
         });
+        view.backup.setOnAction((event)
+                -> {
+            methods.ScheduleTask();
+        });
+
     }
 
 }

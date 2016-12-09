@@ -26,6 +26,7 @@ public class View extends BorderPane {
     MenuItem about = new MenuItem("About");
     MenuItem help = new MenuItem("Help");
     MenuItem feedback = new MenuItem("Feedback");
+    MenuItem backup = new MenuItem("Schedule backup task");
 
     //create buttons
     Button BakcupFiles = new Button("Backup Files");
@@ -93,7 +94,7 @@ public class View extends BorderPane {
     }
     
     private MenuBar menuBar() {
-        helpMenu.getItems().addAll(help, about, feedback);
+        helpMenu.getItems().addAll(help, about, feedback,backup);
         MenuBar menuBar = new MenuBar();
         menuBar.getMenus().add(helpMenu);
         return menuBar;
