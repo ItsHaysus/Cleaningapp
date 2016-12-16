@@ -1,4 +1,3 @@
-using CleaningAppCSharp;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -64,6 +63,11 @@ namespace CleaningAppCS
         private void DeleteOldFilesButton(object sender, RoutedEventArgs e)
         {
             method.DeleteOldMethods();
+        }
+
+        private void autoBackup(object sender, RoutedEventArgs e)
+        {
+
         }
 
         private void LogOutMenu(object sender, RoutedEventArgs e)

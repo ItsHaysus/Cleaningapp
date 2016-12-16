@@ -1,10 +1,9 @@
-﻿using CleaningAppCS;
-using System;
+﻿using System;
 using System.Diagnostics;
 using System.IO;
 using System.Windows;
 
-namespace CleaningAppCSharp
+namespace CleaningAppCS
 {
 
     class Methods
@@ -35,7 +34,7 @@ namespace CleaningAppCSharp
             }
             catch (Exception)
             {
-                MessageBox.Show("Error sendinf feedback");
+                MessageBox.Show("Error sending feedback");
             }
         }
 
@@ -78,17 +77,17 @@ namespace CleaningAppCSharp
         }
 
         public void DiskCleanerMethod()
-        {
-            try
-            {
-                string command = "/C Cleanmgr /sagerun:1";
-                Process.Start("CMD.exe", command);
-            }
-            catch (System.ComponentModel.Win32Exception)
-            {
-                MessageBox.Show("File not found");
-            }
-        }
+                 {
+                     try
+                     {
+                         string command = "/C Cleanmgr /sagerun:1";
+                         Process.Start("CMD.exe", command);
+                     }
+                     catch (System.ComponentModel.Win32Exception)
+                     {
+                         MessageBox.Show("File not found");
+                     }
+                 }
 
         public void CCleanerMethod()
         {
@@ -135,6 +134,21 @@ namespace CleaningAppCSharp
             catch (IOException)
             {
                 Console.WriteLine("IO");
+            }
+            catch (System.ComponentModel.Win32Exception)
+            {
+                MessageBox.Show("File not found");
+            }
+        }
+        public void autoBackup()
+        {
+            string fileName = "backup.bat";
+            string file = Path.Combine(Environment.CurrentDirectory, @"Webcontent\", fileName);
+            String ScheduleTask = "SchTasks /Create /SC MONTHLY /D 1 /TN “Backup” /TR “"+file+"” /ST 16:30";
+
+            try
+            {
+                Process.Start("CMD.exe", ScheduleTask);
             }
             catch (System.ComponentModel.Win32Exception)
             {
